@@ -1,5 +1,12 @@
--- You can add your own plugins here or in other files in this directory!
---  I promise not to create any merge conflicts in this directory :)
---
--- See the kickstart.nvim README for more information
-return {}
+-- Lets try installing a scrollbar
+return {
+  {
+    {
+      'petertriho/nvim-scrollbar',
+      config = function()
+        require('scrollbar').setup()
+        require('scrollbar.handlers.gitsigns').setup()
+      end,
+    },
+  },
+}
